@@ -19,7 +19,7 @@ formDelete.forEach((item) => {
 });
 
 taskCheck.forEach((item) => {
-  item.querySelector("input").addEventListener("click", function () {
+  item.querySelector(".check").addEventListener("click", function () {
     item.submit();
   });
 });

@@ -34,11 +34,11 @@
           <form action="/todo/check/" class="task-check">
             <input type="hidden" name="pk" value="{{ task.pk }}" />
             {% if task.checked %}
-            <input type="checkbox" checked />
-            <p class="activeSubmit content">{{ task.text }}</p>
+              <input type="checkbox" class="check" checked />
+              <p class="activeSubmit content">{{ task.text }}</p>
             {% else %}
-            <input type="checkbox" />
-            <p class="content">{{ task.text }}</p>
+              <input type="checkbox" class="check" />
+              <p class="content">{{ task.text }}</p>
             {% endif %}
           </form>
           <div class="icon">
@@ -59,7 +59,8 @@
             </div>
           </div>
         </div>
-        {% endfor %} {% if not todos %}
+        {% endfor %}
+        {% if not todos %}
         <div class="empty-task"></div>
         {% endif %}
       </div>
